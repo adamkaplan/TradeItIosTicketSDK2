@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -282,24 +282,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-fd-jIK">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbS-w1-Qzs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IYS-HK-sG0" id="zyR-01-Kvz"/>
-                                </connections>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DpR-fd-jIK" firstAttribute="leading" secondItem="iKX-mW-DzV" secondAttribute="leading" id="1O2-gv-T3v"/>
-                            <constraint firstItem="h30-Bx-9e6" firstAttribute="top" secondItem="DpR-fd-jIK" secondAttribute="bottom" id="Pt3-PQ-sCE"/>
-                            <constraint firstAttribute="trailing" secondItem="DpR-fd-jIK" secondAttribute="trailing" id="dX7-9t-LgV"/>
-                            <constraint firstItem="DpR-fd-jIK" firstAttribute="top" secondItem="qaP-q8-PXf" secondAttribute="bottom" id="ftJ-H5-6lT"/>
+                            <constraint firstItem="PbS-w1-Qzs" firstAttribute="top" secondItem="qaP-q8-PXf" secondAttribute="bottom" id="QHY-2G-mff"/>
+                            <constraint firstItem="h30-Bx-9e6" firstAttribute="top" secondItem="PbS-w1-Qzs" secondAttribute="bottom" id="WOA-yV-i0k"/>
+                            <constraint firstAttribute="trailing" secondItem="PbS-w1-Qzs" secondAttribute="trailing" id="p4a-Nd-78h"/>
+                            <constraint firstItem="PbS-w1-Qzs" firstAttribute="leading" secondItem="iKX-mW-DzV" secondAttribute="leading" id="qgl-du-QUO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="DpR-fd-jIK" id="Lwu-e6-oXJ"/>
+                        <outlet property="webView" destination="PbS-w1-Qzs" id="0gf-d5-WaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCl-7M-W7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2553,19 +2555,19 @@
         <image name="success_icon.png" width="101" height="101"/>
         <image name="truste.png" width="405" height="102"/>
         <namedColor name="button">
-            <color red="0.11372549019607843" green="0.68627450980392157" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.094117647058823528" green="0.5607843137254902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="overlayLevelTwoBackground">
-            <color red="0.11372549019607843" green="0.13333333333333333" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="permaWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryText">
-            <color red="0.96078431372549022" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13725490196078433" green="0.16470588235294117" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tertiaryText">
-            <color red="0.72549019607843135" green="0.74117647058823533" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.35686274509803922" green="0.38823529411764707" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

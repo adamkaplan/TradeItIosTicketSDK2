@@ -1,7 +1,12 @@
 import UIKit
+import WebKit
 
-class TradeItWebViewController: CloseableViewController, UIWebViewDelegate {
-    @IBOutlet weak var webView: UIWebView!
+class TradeItWebViewController: CloseableViewController, WKNavigationDelegate {
+    @IBOutlet weak var webView: WKWebView! {
+        didSet {
+            webView?.navigationDelegate = self
+        }
+    }
     var url = ""
     var pageTitle = ""
     
@@ -13,12 +18,12 @@ class TradeItWebViewController: CloseableViewController, UIWebViewDelegate {
             _ = self.navigationController?.popViewController(animated: true)
             return
         }
-        self.webView.loadRequest(URLRequest(url: urlObject))
+        self.webView?.load(URLRequest(url: urlObject))
     }
 
-    // MARK: UIWebViewDelegate
+    // MARK: WKNavigationDelegate
 
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.navigationItem.title = self.pageTitle;
     }
 }
